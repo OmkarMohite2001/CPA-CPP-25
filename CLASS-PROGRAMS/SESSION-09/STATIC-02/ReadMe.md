@@ -1,0 +1,1 @@
+- This file illustrates static use-case 3 (with respect to the course syllabus)

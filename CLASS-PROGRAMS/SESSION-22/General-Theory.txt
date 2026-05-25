@@ -1,0 +1,98 @@
+Oeprators can be classified based on their ARY. 
+(ARY -> Number of operands required by the operator to function correctly)
+
+C++ has three kinds of operator based on their ary. 
+
+1) UNARY 
+    1) Dereference opeator  (*ptr)
+    2) Logical NOT  (!cond)
+    3) BITWISE NOT  (~n)
+    4) Arrow operator (ptr->member) 
+    5) Call operator (functionName(parameters))
+    6) Subscript operator (a[i])
+    7) Pre-increment    (++a)
+    8) Pre-decrement    (--a)
+    9) Post increment   (a++)
+    10) Post decrement   (a--)
+2) BINARY 
+    1) Addition                     (a + b)
+    2) Subtraction                  (a - b)
+    3) Multiplication               (a * b)
+    4) Division                     (a / b)
+    5) Modulo                       (a % b)
+    6) Less than                    (a < b)
+    7) Less than or equal to        (a <= b)
+    8) Greater than                 (a > b)
+    9) Greater than or equal to     (a >= b)
+    10) Equal to                     (a == b)
+    11) Not equal to                (a != b)
+    12) Logical AND                 (a && b)
+    13) Logical OR                  (a || b)
+    14) Bitwise AND                 (a & b)
+    15) Bitwise OR                  (a | b)
+    16) Bitwise XOR                 (a ^ b)
+    17) Shift arithmetic left       (a << b)
+    18) Shift arithmetic right      (a >> b)
+
+3) TERNARY 
+    (cond) ? (expr1) : (expr2)
+
+4) Special opearators 
+    1) cout operator    (std::cout << n)
+    2) cin operator     (std::cin >> n)
+    3) new operator     (new T(parameters))
+    4) delete operator  (delete ptr) 
+
+5) Operators which cannot be overloaded 
+    1) Scope resolution:    (std::cout)
+    2) dot operator         (myDate.getDay())
+    3) Ternary              (cond) ? (expr1) : (expr2)
+    4) Sizeof               sizeof(int)
+    5) Typecast             (T)expr
+    6) ampersed &           &num; 
+    7) comma operator       int num1 = 10, num2 = 20; 
+
+ #   Let $ be a binary opeator 
+
+    class T 
+    {
+        public: 
+            T operator$(const T& rhs_object) const 
+            {
+
+            }
+
+            //  If you dont want lhs_object or rhs object to 
+            //  be const then remove those consts 
+
+            //  If operator $ is not closed under type T 
+            //  Meaning that t1 $ t2 does not produce object 
+            //  of type T then let Tr be the type of result 
+
+            Tr operator$(const T& rhs_object) const 
+            {
+
+            }
+    }; 
+
+# Unary operator 
+
+# Let $ be a unary operator which we want to overload for classs T 
+
+class T 
+{
+    public: 
+        //  Let Tr be a type of result when operator $ is applied on object of type T 
+        //  In some cases Tr may be T. 
+        Tr operator$() 
+        {
+
+        }
+
+        //  If operator$  does not mutate the operand object then make 
+        //  this pointer as a pointer to const 
+        Tr operator$() const 
+        {
+            
+        }
+}; 

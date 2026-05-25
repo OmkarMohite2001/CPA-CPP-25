@@ -1,0 +1,32 @@
+Problem 1: 
+    unsigned int X = 0x0A0B00C0D; 
+    Use type casting to determine the endianness of underlying machine 
+
+Problem 2: 
+Let T be a name of structure 
+and mem be a name of member of T. 
+Calculate byte offset of mem with respect to T 
+WITHOUT CREATING ANY INSTANCE OF T. 
+T inT;  // not allowed 
+T* pT = malloc(sizeof(T));  // not allowed 
+
+struct A 
+{
+    int a; char b; float c; 
+}; 
+
+Calculate offset of 'a', 'b' and 'c' 
+in three different statements 
+without creating any instance of strut A 
+
+and then generalise of T and mem 
+using #define 
+
+Problem 3: 
+    unsigned long long int x; 
+    [  ][  ][  ][  ][  ][  ][  ][  ]
+    8   7   6   5   4   3   2   1
+
+    Write content 0xFF FF FF FF from byte 3 to byte 7 
+    WITHOUT TOUCHING BYTE 1 2 and 8. 
+

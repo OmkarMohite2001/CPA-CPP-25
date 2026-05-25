@@ -1,0 +1,18 @@
+C style casting 
+
+(type)expr; 
+
+(Tc)expr;
+
+
+OPERATOR((type)expr)
+
+#------------------------------------------
+
+static_cast<Tc>(expr)
+
+reinterpret_cast<Tc>(expr)
+
+dynamic_cast<Tc>(expr)
+
+const_cast<Tc>(expr)

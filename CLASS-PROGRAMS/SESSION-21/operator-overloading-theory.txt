@@ -1,0 +1,95 @@
+There are two principle entities: 1) data type 2) operator 
+Both of these entities come in two flavours: 1) built in 2) user defined 
+#-------------------------------------------------------------------------
+
+1)  Built in data type - Built in operators 
+    Responsibility of definition: 
+        built in data type -> Language 
+        built in operators -> Language 
+    Syntax: 
+        int n1 = 100; 
+        int n2 = 200; 
+        int sum = n1 + n2; 
+
+2)  Built in data type - User defined operator 
+    Meaning of user defined operator: functions! 
+    e.g. C/C++ programming languages do not have operator for 
+    factorial operation or exponential operator. That does not 
+    mean that we can't compute a factorial of integer. 
+    We can define a function named factorial which does the 
+    necessary computation. 
+    Function() -> User defined operator 
+
+    Responsibility of definition: 
+        1) Built in data type -> Language 
+        2) User defined operator -> Programmer 
+
+    Syntax: 
+    int factorial(int n)
+    {
+        if(n == 0)
+            return (1); 
+        return (n * factorial(n-1)); 
+    }
+
+    int m = 5; 
+    int result; 
+
+    result = factorial(m); 
+
+3)  User defined data type = User defined operator 
+    Meaning of user defined operator is same as in the point 2) 
+    User defined operator means a function. 
+
+    C/C++ programming language offer statement struct and class respectively 
+    for defining user defined / custom data types. 
+
+    Responsibility of definition: 
+    1) User defined data types -> Programmer 
+    2) User defined operators -> Programmer 
+
+    struct Date 
+    {
+        int day; 
+        int month; 
+        int year; 
+    }; 
+
+    int get_day(struct Date* pDate)
+    {
+        return pDate->day; 
+    }
+
+    class Employee 
+    {
+        private: 
+            std::string empName; 
+            int rollNumber; 
+
+        public: 
+            Employee(std::string _empName, int _rollNumber) : empName(_empName), 
+                                                            rollNumber(_rollNumber)
+            {
+
+            }
+
+            void set_rollnumber(int newRollNumber) 
+            {
+                this->rollNumber = newRollNumber; 
+            }
+    }; 
+
+    C: 
+    struct Date* pDate = (struct Date*)malloc(sizeof(struct Date)); 
+    assert(pDate != NULL); 
+    pDate->day = 30; 
+    pDate->month = 12; 
+    pDate->year = 2026; 
+    int dd = get_day(pDate); 
+
+    C++: 
+    Employee* pEmployee = new Employee("Yogeshwar", 100); 
+    pEmployee->set_rollnumber(200); 
+    
+4)  Data type -> User defined 
+    Operator -> Built in 

@@ -1,0 +1,1 @@
+- static keyword applied to data definition statement inside class.

@@ -1,0 +1,1 @@
+- Demonstration of static member functions of a class 

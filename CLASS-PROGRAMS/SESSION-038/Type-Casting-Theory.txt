@@ -1,0 +1,52 @@
+CPA Principle:
+    The meaning of operator is decided in the context of types of their operands. 
+
+Examples: 
+    int a = 10, b = 20, c; 
+    short p = 10, q = 20, r; 
+
+    c = a + b; 
+
+    Assembly:
+        movl    a, %eax 
+        movl    b, %edx 
+        addl    %edx, %eax 
+        movl    %eax, c 
+
+        type(a) type(b) and type(c) is int. 
+        And the choice of suffix 'l' in movl, addl ('l' stands for long -> 32 bit)
+        choice of registers %eax, %edx is decided by compiler by looking type int. 
+
+    r = p + q; 
+
+    Assembly: 
+        movw    p, %ax 
+        movw    q, %dx 
+        addw    %dx, %ax 
+        movw    %ax, r
+
+        type(p), type(q) and type(r) is short int. 
+        And the choice of suffix 'w' in movw, addw ('w' stands for word -> 16 bit)
+        choice of registers %ax, %dx is decided by compiler by looking at type short int. 
+#---------------------------------------------------------------------------------------------
+DATA ACCESS OPERATORS 
+    Assignment Operator 
+    Dereference Operator 
+    Subscript Operator : arr[i] = Base Address of Array + i * sizeof(array element type)
+    Dot Operator 
+    Arrow Operator 
+
+    LHS = RHS; 
+
+    a = b; 
+
+    *ptr; 
+
+
+    ptr + k  = address in ptr + k * sizeof(typeof(*ptr))
+    ptr - k  = address in ptr - k * sizeof(typeof(*ptr))
+
+
+    x.y 
+    x->y == (*x).y
+    #---------------------------------------------------------------------------------------------

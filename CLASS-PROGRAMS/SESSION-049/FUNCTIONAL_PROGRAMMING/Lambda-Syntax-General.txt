@@ -1,0 +1,21 @@
+    [caputre-list](formal parameter list) -> return_type{
+        // BODY 
+    }
+
+    //  Named function 
+    return_type_annotation function_name(formal parameter list)
+    {
+
+    }
+
+    Differences: 
+        1) Lambda has a capture list which is absent in traditional named function 
+        2) The placement of return type annotation -> in lambda it is on the RHS of 
+            formal parameter list combo 
+            -> in traditional function it is on the left of function_name & formal 
+            parameter list combo 
+        3) VIMP Differences: traditional function syntax creates a NAMED FUNCTION. 
+            (function having a name)
+            Lambda creates an anonymous function. 
+        4) Return type annotation is compulsory in traditional functions 
+            but optional in lambda 

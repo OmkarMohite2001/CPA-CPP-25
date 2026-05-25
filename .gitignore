@@ -1,0 +1,35 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Executables
+*.exe
+
+# DLLs
+*.dll
+
+# Debug
+Debug/
+Release/
+
+# Node
+node_modules/
+
+# Angular
+dist/
+
+# VS Code
+.vscode/
+
+# Database
+*.mdf
+*.ldf
+
+*.exe

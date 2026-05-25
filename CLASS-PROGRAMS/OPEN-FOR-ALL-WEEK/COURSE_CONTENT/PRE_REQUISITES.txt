@@ -1,0 +1,18 @@
+1) Data definitoin statements 
+    built in types 
+2) Branching looping statements 
+    if, if-else, if-else if-else, switch 
+    for, while, do while, break, continue 
+    nested loops 
+3)  Function declare, call, define, 
+    pass by value, pass by reference 
+4)  user defined data type using structure 
+5)  array of built in types, array of structures 
+6)  array as a member of structure 
+    (dereference, dot, arrow, subscript)
+7)  Memory allocation using data definition statement 
+8)  memory allocation using malloc(), calloc(), realloc() 
+9)  Required pointer understeanding for 7) , 8) 
+
+Watch Adv C Pointer Workshop ,
+https://youtube.com/playlist?list=PLA0Sq4Hr1lOPUkxP9BQe8d6DdXDsUjy9i&feature=shared

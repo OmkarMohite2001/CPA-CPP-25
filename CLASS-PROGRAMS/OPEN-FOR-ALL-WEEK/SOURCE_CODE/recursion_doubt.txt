@@ -1,0 +1,31 @@
+void test(void)
+{
+    int a, b, c; 
+    int tmp; 
+    int result; 
+
+    tmp = a + b; 
+    result = tmp + c; 
+
+    result = a + b + c; 
+
+}
+
+
+void merge_sort(int* p_arr, int p, int r){
+    int q = (p+r)/2; 
+
+    if(p < r){
+        merge_sort(p_arr, p, q); 
+        merge_sort(p_arr, q+1, r); 
+        merge(p_arr, p, q, r); 
+    }
+}
+
+
+void test(){
+    f(); // cout <<
+    f(); // cout << 
+    f(); // cout << 
+
+}

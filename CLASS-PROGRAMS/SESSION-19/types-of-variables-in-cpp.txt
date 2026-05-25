@@ -1,0 +1,138 @@
+1) Instance variable
+    Built in types: 
+        char c; 
+        unsigned char cNum; 
+
+        short int sNum; 
+        unsigned short int usNum; 
+
+        int iNum; 
+        unsigned int uiNum; 
+
+        long int largeNum; 
+        unsigned long int u_largeNum; 
+
+        long long veryLargeNumber; 
+        unsinged long long int u_veryLargeNumber; 
+
+        float fNum; 
+        double dNum; 
+        long double ldNum; 
+
+    User defined data types using struct 
+        struct Date
+        {
+            int day; 
+            int month; 
+            int year; 
+        }; 
+
+        struct Date myDate; 
+
+    User defined data types using class 
+
+    class Student 
+    {
+        private: 
+            const char* studentName; 
+            const char* studentAddress; 
+            unsigned int rollNumber; 
+            float studentAttendance; 
+            float studentMarks; 
+
+        public: 
+            Student(); 
+            // some getters / setters 
+    }; 
+
+    Student newStudent; 
+
+    int iNum; 
+    iNum:[   ][  ][  ][  ]
+    &iNum; 
+
+2)  Pointer: 
+    Consider any type T from section 1) 
+    T* p; 
+    p is a pointer variable. 
+    Irrespective of sizeof(T)
+    sizeof(p)   ==  8 bytes on 64 bit machines 
+                ==  4 bytes on 32 bit machine 
+
+3)  Reference: 
+    To attach another instance variable like name 
+    with exiting memory block.
+
+    void test()
+    {
+        int num;    // Address of num == 1000 (say)
+        int& ref = num; 
+        int* p = &num; 
+        num = 5; 
+        ref = 5; 
+    
+    }
+
+    // T& ref = any expression which evaluates to location value of type T 
+
+void func(int num)
+{
+
+}
+
+main()
+{
+    int m = 50; 
+    func(m); 
+}
+
+struct A {};    // sizeof(struct A) == 128 
+
+void func(struct A inA)
+{
+
+}
+
+main()
+{
+    struct A myInstance = {}; 
+
+    func(myInstance); 
+}
+
+//////////////////////////
+void func(struct A* ptr)
+{
+
+}
+
+main()
+{
+    struct A myInstnace = {}; 
+    struct A* pA = &myInstance; 
+    func(&myInstance); 
+    func(pA); 
+}
+
+
+void f(Date ref)
+{
+}
+
+main()
+{
+    Date myDate = null; 
+
+    Date myDate = new Date(); 
+
+    f(myDate)
+}
+
+
+INFERENCE
+
+REFERENCE VARIABLE: 
+    IMPLEMENTATION LEVEL DEFINITION : HIDDEN CONST POINTER TO REFERRED OBJECT 
+    DESIGN LEVEL DEFINITION: AN ALIAS TO EXISTING MEMORY BLOCK 
+
+    

@@ -1,0 +1,7 @@
+using namespace your_namespace_name; // global / local 
+
+using your_namespace_name::one_of_the_names_in_your_namespace_name; // global / local 
+
+SCOPE RESOLUTION OPERATOR 
+:: 
+

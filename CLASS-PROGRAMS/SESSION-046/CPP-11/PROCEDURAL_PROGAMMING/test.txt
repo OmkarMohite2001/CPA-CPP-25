@@ -1,0 +1,56 @@
+const int n = 100; 
+
+void f(void)
+{
+    const int n = 100; 
+
+    int m; 
+    std::cout << "Enter value for m:"; 
+    std::cin >> m; 
+
+    const int k = m; // is allowed 
+    constexpr int k = m; // ERROR 
+    /* 
+        const int k; 
+        k = m; 
+    */
+}
+
+
+void test(void)
+{
+    int m = 100; 
+    int n; 
+
+    n = 200; 
+}
+
+.section .text 
+.globl test 
+.type test, @function 
+
+test: 
+    pushl   %ebp 
+    movl    %esp, %ebp 
+
+    subl    $8, %esp    # allocate storage for m : int m; 
+                        # allocate storage for n : int n; 
+
+    movl    $100, -4(%ebp) # m = 100; 
+    movl    $200, -8(%ebp) # n = 200 
+
+    movl    %ebp, %esp 
+    popl    %ebp 
+    ret 
+#-------------------------------------------
+
+int g_num = 100; 
+
+.section .data 
+.globl  g_num 
+.type   g_num, @object 
+.size g_num, 4
+.align  4 
+g_num: 
+.int    100 
+
