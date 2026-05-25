@@ -2,7 +2,7 @@
 class Test
 {
     private:
-        int  num;
+        int  num,num2;
         double d_num;
         static int s_num;
 
