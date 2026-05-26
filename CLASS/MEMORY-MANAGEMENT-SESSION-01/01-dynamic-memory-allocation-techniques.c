@@ -104,7 +104,6 @@ void dynamic_user_defined_array(void)
         puts("out of memory");
         exit(EXIT_FAILURE);
     }
-
     int i;
     for(i = 0; i < p_array->N; ++i)
     {
